@@ -1,0 +1,28 @@
+
+<scroll-view scroll-x class="scrollview">
+    <view class="news-categroies">
+        <view class="news-categroies-item" wx:for="{{newsType}}" wx:key="*this" wx:for-index="ids">
+            <view class="{{currentTab == ids ? 'active' : ''}}" bindtap="clickTap" data-current="{{ids}}" data-id="{{item.id}}">{{item.name}}</view>
+        </view>
+    </view>
+</scroll-view>
+
+<view class="news-list">
+
+            <view class="news-list-item" wx:for="{{newsData}}" wx:key="*this">
+                <view class="news-list-article" bindtap="onTapNews" data-id="{{item.id}}">
+                    <view class="news-info">
+                        <view class="news-title">{{item.title}}</view>
+                        <view class="news-detail">
+                            <view>{{item.source}}</view>
+                            <view>{{item.date}}</view>                    
+                        </view>
+                    </view>
+                    <view class="news-pic">
+                        <image wx:if="{{item.firstImage}}" class="news-pic-img" src="{{item.firstImage}}" mode="widthFix"></image>
+                        <image wx:else class="news-pic-img" src="../../images/default.png" mode="widthFix"></image>
+                    </view>
+                </view>
+            </view>
+</view>
+

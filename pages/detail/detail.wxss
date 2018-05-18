@@ -1,0 +1,36 @@
+.header{
+    color: #666;
+}
+.news-detail {
+  padding: 20rpx;
+}
+.detail-title {
+  font-size: 30rpx;
+  line-height:42rpx;
+  color:#333;
+}
+.detail-info {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  color:#999;
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  line-height:35rpx;
+}
+.news-detail-wrapper {
+  margin-top: 20rpx;
+}
+.news-detail-s {
+  margin-bottom:10rpx;
+  font-size: 25rpx;
+  line-height:35rpx;
+  color:#666;
+}
+.strong {
+  font-weight:bold;
+}
+.news-detail-p {
+  width:100%;
+  margin-bottom:10rpx;
+}

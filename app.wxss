@@ -1,0 +1,17 @@
+
+img{
+    vertical-align:middle;
+    border:0;
+}
+
+ul,ol,li {
+    margin:0;
+    padding:0;
+}
+
+.header{
+    margin-top: 20rpx;
+    font-size: 25rpx;
+    line-height: 35rpx;
+    color: #fff;
+}

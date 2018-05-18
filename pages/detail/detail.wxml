@@ -1,0 +1,23 @@
+
+<view class="news-detail">
+    <view class="detail-title">{{newsDetail.title}}</view>
+    <view class="detail-info">
+        <view class="detail-info-time">{{newsDetail.source}} {{newsDetail.date}}</view>
+        <view class="detail-info-time">{{newsDetail.readCount}}</view>
+    </view>
+    
+    <view class="news-detail-wrapper">
+        <view class="news-detail-article" wx:for="{{newsDetail.content}}" wx:key="*this">
+            <block wx:if="{{item.type === 'strong'}}">
+            
+                <view class="news-detail-s strong">{{item.text}}</view>
+            </block>
+            <block wx:if="{{item.type === 'p'}}">
+                <view class="news-detail-s">{{item.text}}</view>
+            </block>
+            <block wx:if="{{item.type === 'image'}}">
+                <image class="news-detail-p" src="{{item.src}}"></image> 
+            </block>
+        </view>
+    </view> 
+</view>
