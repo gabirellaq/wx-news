@@ -58,6 +58,7 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  overflow:hidden;
 }
 .news-detail {
   margin-top: 10rpx;

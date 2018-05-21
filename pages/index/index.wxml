@@ -8,21 +8,20 @@
 </scroll-view>
 
 <view class="news-list">
-
-            <view class="news-list-item" wx:for="{{newsData}}" wx:key="*this">
-                <view class="news-list-article" bindtap="onTapNews" data-id="{{item.id}}">
-                    <view class="news-info">
-                        <view class="news-title">{{item.title}}</view>
-                        <view class="news-detail">
-                            <view>{{item.source}}</view>
-                            <view>{{item.date}}</view>                    
-                        </view>
-                    </view>
-                    <view class="news-pic">
-                        <image wx:if="{{item.firstImage}}" class="news-pic-img" src="{{item.firstImage}}" mode="widthFix"></image>
-                        <image wx:else class="news-pic-img" src="../../images/default.png" mode="widthFix"></image>
-                    </view>
+    <view class="news-list-item" wx:for="{{newsData}}" wx:key="*this">
+        <view class="news-list-article" bindtap="onTapNews" data-id="{{item.id}}">
+            <view class="news-info">
+                <view class="news-title">{{item.title}}</view>
+                <view class="news-detail">
+                    <view>{{item.source == '' ? '腾讯网' : item.source3}}</view>
+                    <view>{{item.date}}</view>                    
                 </view>
             </view>
+            <view class="news-pic">
+                <image wx:if="{{item.firstImage}}" class="news-pic-img" src="{{item.firstImage}}" mode="widthFix"></image>
+                <image wx:else class="news-pic-img" src="{{defaultImage}}" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
 </view>
 

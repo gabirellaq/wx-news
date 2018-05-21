@@ -2,7 +2,7 @@
 <view class="news-detail">
     <view class="detail-title">{{newsDetail.title}}</view>
     <view class="detail-info">
-        <view class="detail-info-time">{{newsDetail.source}} {{newsDetail.date}}</view>
+        <view class="detail-info-time">{{newsDetail.source == '' ? '腾讯网' : newsDetail.source}} {{newsDetail.date}}</view>
         <view class="detail-info-time">{{newsDetail.readCount}}</view>
     </view>
     

@@ -24,10 +24,8 @@ Page({
                 name: '其他'
             }], //新闻类型
         newsData: [],
-        currentTab: 0
-    },
-    test:function(){
-
+        currentTab: 0,
+        defaultImage: '../../images/default.png', //默认图片
     },
     onLoad() {
         wx.setNavigationBarColor({
@@ -48,7 +46,6 @@ Page({
                 type: type
             },
             success: res => {
-                console.log(res)
                 let result = res.data.result;
                 result.map(i => {
                   i.date = dateFilter.formatTime(i.date)
@@ -63,14 +60,12 @@ Page({
         })
     },
     clickTap(e) {
-      console.log(e)
       if (this.data.currentTab === e.currentTarget.dataset.current){
             return false;
         }else {
             this.setData({
               currentTab: e.currentTarget.dataset.current
             })
-            console.log(e)
             this.getNewsCategories(e.currentTarget.dataset.id)
         }
     },

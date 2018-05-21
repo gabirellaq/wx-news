@@ -4,7 +4,7 @@
     "pages/detail/detail"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "新闻资讯",
     "navigationBarTextStyle":"black",

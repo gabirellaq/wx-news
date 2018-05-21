@@ -2,8 +2,7 @@ const dateFilter = require('../utils/util.js')
 Page({
     data: {        
         id: '',
-        newsDetail: {},
-        newscontent: []
+        newsDetail: {}
     },
     onLoad(options) {
         this.setData({
